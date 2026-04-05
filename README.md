@@ -131,7 +131,7 @@ AI-powered emotion-optimized advertising platform. "AlphaGo for Ads" -- real-tim
 
 <div align="center">
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=D0NMEGA&layout=compact&hide_border=true&bg_color=0d1117&title_color=ff3333&text_color=c9d1d9&langs_count=8" />
+<img width="36%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=D0NMEGA&layout=donut-vertical&hide_border=true&bg_color=0d1117&title_color=ff3333&text_color=c9d1d9&langs_count=6" />
 
 </div>
 
@@ -139,7 +139,7 @@ AI-powered emotion-optimized advertising platform. "AlphaGo for Ads" -- real-tim
 
 <div align="center">
 
-[![trophy](https://github-profile-trophy.vercel.app/?username=D0NMEGA&theme=onestar&no-frame=true&no-bg=true&column=6&title=Commits,Repositories,Stars,Followers,PullRequest,Issues)](https://github.com/ryo-ma/github-profile-trophy)
+<img src="https://github-profile-trophy.vercel.app/?username=D0NMEGA&theme=darkhub&no-frame=true&no-bg=true&column=6&title=Commits,Repositories,Stars,Followers,PullRequest,Issues" />
 
 </div>
 
