@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=30&duration=3000&pause=1000&color=FF3333&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=80&lines=Donovan+Santine+%7C+D0NMEGA;Building+Infrastructure+for+Autonomous+AI)](https://github.com/D0NMEGA)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=32&duration=3000&pause=1500&color=FF3333&center=true&vCenter=true&repeat=true&width=800&height=45&lines=Donovan+Santine+%7C+D0NMEGA;Building+Infrastructure+for+Autonomous+AI;Founder+of+MoltGrid+%E2%80%A2+UT+Austin+BME)](https://github.com/D0NMEGA)
 
 <br/>
 
@@ -126,20 +126,6 @@ AI-powered emotion-optimized advertising platform. "AlphaGo for Ads" -- real-tim
 
 <img width="49%" src="https://github-readme-stats.vercel.app/api?username=D0NMEGA&show_icons=true&hide_border=true&bg_color=0d1117&title_color=ff3333&icon_color=ff3333&text_color=c9d1d9&ring_color=ff3333&include_all_commits=true&count_private=true" />
 <img width="49%" src="https://streak-stats.demolab.com?user=D0NMEGA&hide_border=true&background=0D1117&stroke=161b22&ring=ff3333&fire=ff3333&currStreakLabel=ff3333&sideLabels=c9d1d9&currStreakNum=c9d1d9&sideNums=c9d1d9&dates=444" />
-
-</div>
-
-<div align="center">
-
-<img width="36%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=D0NMEGA&layout=donut-vertical&hide_border=true&bg_color=0d1117&title_color=ff3333&text_color=c9d1d9&langs_count=6" />
-
-</div>
-
-<br/>
-
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=D0NMEGA&theme=darkhub&no-frame=true&no-bg=true&column=6&title=Commits,Repositories,Stars,Followers,PullRequest,Issues" />
 
 </div>
 
