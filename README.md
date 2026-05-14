@@ -125,7 +125,7 @@ AI-powered emotion-optimized advertising platform. "AlphaGo for Ads" -- real-tim
 
 <div align="center">
 
-<img width="49%" src="https://github-readme-stats.vercel.app/api?username=D0NMEGA&show_icons=true&hide_border=true&bg_color=0d1117&title_color=ff3333&icon_color=ff3333&text_color=c9d1d9&ring_color=ff3333&include_all_commits=true&count_private=true" />
+<img width="49%" src="https://github-readme-stats-eight-theta.vercel.app/api?username=D0NMEGA&show_icons=true&hide_border=true&bg_color=0d1117&title_color=ff3333&icon_color=ff3333&text_color=c9d1d9&ring_color=ff3333&include_all_commits=true&count_private=true&rank_icon=percentile" />
 <img width="49%" src="https://streak-stats.demolab.com?user=D0NMEGA&hide_border=true&background=0D1117&stroke=161b22&ring=ff3333&fire=ff3333&currStreakLabel=ff3333&sideLabels=c9d1d9&currStreakNum=c9d1d9&sideNums=c9d1d9&dates=444" />
 
 </div>
