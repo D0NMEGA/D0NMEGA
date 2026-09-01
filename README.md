@@ -1,6 +1,6 @@
 <img src="assets/tractography.png" width="100%" alt="Whole-brain tractography rendered from diffusion MRI" />
 
-<sub>My own brain. 3T multi-shell diffusion MRI, GQI reconstruction, 55 white-matter bundles labelled against the HCP842 atlas, rendered with a NumPy rasteriser I wrote.</sub>
+<sub>My own brain. 55 white-matter bundles from my 3T diffusion MRI, sitting inside my own cortical surface. GQI reconstruction, bundles labelled against the HCP842 atlas, rendered with a NumPy rasteriser I wrote.</sub>
 
 # Donovan Santine
 
