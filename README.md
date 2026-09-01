@@ -1,161 +1,73 @@
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:ff3333&height=220&section=header&text=&fontSize=0" />
+<img src="assets/tractography.png" width="100%" alt="Whole-brain tractography rendered from diffusion MRI" />
 
-<div align="center">
+<sub>My own brain. 3T multi-shell diffusion MRI, GQI reconstruction, 55 white-matter bundles labelled against the HCP842 atlas, rendered with a NumPy rasteriser I wrote.</sub>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=32&duration=3000&pause=1500&color=FF3333&center=true&vCenter=true&repeat=true&width=800&height=45&lines=Donovan+Santine+%7C+D0NMEGA;Building+Infrastructure+for+Autonomous+AI;Founder+of+MoltGrid+%E2%80%A2+UT+Austin+BME)](https://github.com/D0NMEGA)
+# Donovan Santine
 
-<br/>
+Biomedical engineering at UT Austin. I build brain-computer interfaces, the
+neuroimaging pipelines that feed them, and infrastructure for autonomous agents.
 
-<a href="https://moltgrid.net"><img src="https://img.shields.io/badge/moltgrid.net-ff3333?style=for-the-badge&logo=googlechrome&logoColor=white" /></a>
-<a href="https://pypi.org/project/moltgrid/"><img src="https://img.shields.io/badge/PyPI-moltgrid-3775A9?style=for-the-badge&logo=pypi&logoColor=white" /></a>
-<a href="https://www.npmjs.com/package/moltgrid"><img src="https://img.shields.io/badge/npm-moltgrid-CB3837?style=for-the-badge&logo=npm&logoColor=white" /></a>
-<a href="https://linkedin.com/in/donovan-santine"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-<a href="https://d0nmega.github.io/card"><img src="https://img.shields.io/badge/3D_CARD-Interactive-ff3333?style=for-the-badge&logo=threedotjs&logoColor=white" /></a>
+Most of my week is EEG and diffusion MRI. The rest is backend work, usually
+because a pipeline needed something that did not exist yet.
 
-</div>
+[INIaustin.org](https://iniaustin.org) | [moltgrid.net](https://moltgrid.net) | [Interactive card](https://d0nmega.github.io/card) | [LinkedIn](https://linkedin.com/in/donovan-santine)
 
-<br/>
+## Brain-computer interfaces
 
-## `> whoami`
+[**Fable**](https://github.com/LonghornNeurotech/Fable) decodes meaning instead of
+motor intent, reading the N400 event-related potential while a story unfolds.
+Built in 48 hours by a team of five at Global NeuroHack 2026 in San Francisco,
+where it placed 2nd internationally. There is a [live demo](https://fable-snowy.vercel.app).
 
-```python
-class D0NMEGA:
-    name     = "Donovan Santine"
-    role     = "Founder & Engineer"
-    school   = "UT Austin -- BME Honors"
-    building = "MoltGrid -- Backend-as-a-Service for AI Agents"
-    research = "Exposome Analytics @ REACH Equity Lab"
-    stack    = ["Python", "FastAPI", "PostgreSQL", "Redis", "Cloudflare"]
-```
+[**Longhorn Neural Interface Platform**](https://github.com/LonghornNeurotech/GUI)
+is Longhorn Neurotech's desktop EEG application, covering acquisition, DSP, model
+training and deployment. 35 released builds so far, currently v1.46, with
+separate macOS and Windows artifacts and an in-app updater. Supports the g.tec
+Unicorn Hybrid Black over native BLE, OpenBCI Cyton, Myo, and BrainFlow. I am the
+top contributor, with 80 of its 121 commits.
 
-I build open-source infrastructure that lets autonomous AI agents persist memory, coordinate tasks, and communicate -- without developers reinventing the backend every time. **MoltGrid** ships 200+ endpoints, SDKs in Python and JS, and an MCP server for Claude Code.
+[**ssvep-device-control**](https://github.com/D0NMEGA/ssvep-device-control) is a
+real-time SSVEP interface: 250 ms decision windows, above 90 percent accuracy
+across 4 degrees of freedom.
 
-Previously: brain-computer interfaces (SSVEP real-time decoding), AI-powered ad optimization (SYNQ), and environmental health data science.
+## Neuroimaging
 
-<br/>
+The image at the top is my own scan. The pipeline behind it takes preprocessed
+multi-shell diffusion data (b = 0 through 3000, 96 directions, 1.7 mm isotropic),
+reconstructs it with GQI, tracks 600,000 streamlines, and recovers 55 named
+bundles by atlas recognition. The renderers are pure NumPy with no GPU and no 3D
+library: depth-slab compositing so near fibres occlude far ones, illuminated
+streamline shading so bundles read as tubes rather than ribbons, and a vectorised
+z-buffer that gets its depth test for free from sorting samples far to near.
 
-## `> cat /proc/stack`
+That imagery is the hero of [INIaustin.org](https://iniaustin.org), the site for
+the UT Austin chapter of the Institute of Neuro Innovation, which is the second
+chapter after UCLA.
 
-<div align="center">
+Alongside that I work on MRI preprocessing infrastructure (dcm2bids through
+MRIQC, fMRIPrep, QSIPrep, ASLPrep and QSMxT) and first-author exposome research
+at the REACH Equity Lab, with an abstract accepted to ISES 2026 in the machine
+learning session.
 
-![Skills](https://skillicons.dev/icons?i=python,fastapi,postgres,redis,docker,nginx,cloudflare,js,ts,html,css,git,github,githubactions,linux,vscode&perline=8&theme=dark)
+## Infrastructure
 
-</div>
+[**MoltGrid**](https://github.com/D0NMEGA/MoltGrid) is a backend-as-a-service for
+autonomous agents: memory, task queues, inter-agent messaging, scheduling and
+vector search behind one API. FastAPI, PostgreSQL and Redis, 245 routes, 780
+tests, Apache 2.0. It ships typed SDKs for
+[Python](https://github.com/D0NMEGA/moltgrid-py) and
+[JavaScript](https://github.com/D0NMEGA/moltgrid-js), plus an
+[MCP server](https://github.com/D0NMEGA/moltgrid-mcp) so agents can call it
+natively.
 
-<br/>
+[**donnyclaude**](https://github.com/D0NMEGA/donnyclaude) is a workflow engine for
+Claude Code: durable project state, phase planning, and completion gates that
+fail rather than wave work through. 94 skills, 48 agents, 63 commands and 32
+hooks, installed with one command. v3.2.0 on npm, MIT.
 
-## `> ls ~/projects`
+## Other things I have built
 
-<table>
-<tr>
-<td width="50%">
-
-### [MoltGrid](https://github.com/D0NMEGA/MoltGrid) -- Core Platform
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-
-Open-source BaaS for AI agents. Memory, messaging, task queues, marketplace, and auth -- all in one API. 200+ endpoints, Apache 2.0.
-
-![Stars](https://img.shields.io/github/stars/D0NMEGA/MoltGrid?style=flat-square&color=ff3333)
-![Forks](https://img.shields.io/github/forks/D0NMEGA/MoltGrid?style=flat-square&color=444)
-
-</td>
-<td width="50%">
-
-### [moltgrid-py](https://github.com/D0NMEGA/moltgrid-py) -- Python SDK
-![PyPI](https://img.shields.io/pypi/v/moltgrid?style=flat-square&color=3775A9)
-![Downloads](https://img.shields.io/pypi/dm/moltgrid?style=flat-square&color=444)
-
-```bash
-pip install moltgrid
-```
-
-Typed async client for MoltGrid. Agents, memory, queues, marketplace -- full coverage.
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### [moltgrid-js](https://github.com/D0NMEGA/moltgrid-js) -- JS/TS SDK
-![npm](https://img.shields.io/npm/v/moltgrid?style=flat-square&color=CB3837)
-![Downloads](https://img.shields.io/npm/dm/moltgrid?style=flat-square&color=444)
-
-```bash
-npm install moltgrid
-```
-
-Full-featured JS/TS client with streaming support and complete type definitions.
-
-</td>
-<td width="50%">
-
-### [moltgrid-mcp](https://github.com/D0NMEGA/moltgrid-mcp) -- MCP Server
-![npm](https://img.shields.io/npm/v/moltgrid-mcp?style=flat-square&color=CB3837)
-
-34 tools for Claude Code, Cursor, and any MCP-compatible client. Lets AI agents use MoltGrid natively.
-
-</td>
-</tr>
-<tr>
-<td width="50%">
-
-### [ssvep-device-control](https://github.com/D0NMEGA/ssvep-device-control) -- BCI
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-
-Real-time SSVEP brain-computer interface. 250ms windows, >90% accuracy, 4 degrees of freedom. Future: cursor control, wheelchairs, drones.
-
-</td>
-<td width="50%">
-
-### [synq](https://github.com/D0NMEGA/synq) -- AI Ad Engine
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
-
-AI-powered emotion-optimized advertising platform. "AlphaGo for Ads" -- real-time creative optimization using viewer sentiment.
-
-</td>
-</tr>
-</table>
-
-<br/>
-
-## `> neofetch`
-
-<div align="center">
-
-<img width="49%" src="https://github-readme-stats-eight-theta.vercel.app/api?username=D0NMEGA&show_icons=true&hide_border=true&bg_color=0d1117&title_color=ff3333&icon_color=ff3333&text_color=c9d1d9&ring_color=ff3333&include_all_commits=true&count_private=true&rank_icon=percentile" />
-<img width="49%" src="https://streak-stats.demolab.com?user=D0NMEGA&hide_border=true&background=0D1117&stroke=161b22&ring=ff3333&fire=ff3333&currStreakLabel=ff3333&sideLabels=c9d1d9&currStreakNum=c9d1d9&sideNums=c9d1d9&dates=444" />
-
-</div>
-
-<br/>
-
-## `> uptime`
-
-<div align="center">
-
-<img width="95%" src="https://github-readme-activity-graph.vercel.app/graph?username=D0NMEGA&bg_color=0d1117&color=c9d1d9&line=ff3333&point=ff3333&area=true&area_color=ff333320&hide_border=true&custom_title=Contribution%20Activity" />
-
-</div>
-
-<br/>
-
----
-
-<div align="center">
-
-<img src="https://komarev.com/ghpvc/?username=D0NMEGA&style=flat-square&color=ff3333&label=Profile+Views" />
-
-```
-$ echo "If you're building with AI agents, check out MoltGrid."
-```
-
-<a href="https://moltgrid.net">
-<img src="https://img.shields.io/badge/GET_STARTED-moltgrid.net-ff3333?style=for-the-badge" />
-</a>
-
-</div>
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:161b22,100:ff3333&height=120&section=footer" />
+- [The card](https://d0nmega.github.io/card), a draggable fsaverage5 cortical mesh that heat-maps when you pick an emotion, using MNI coordinates taken from published meta-analyses rather than invented.
+- [Infinite Hallway](https://d0nmega.github.io), a procedurally generated corridor that re-centres the whole scene every 2000 units so it never runs out of floating point.
+- [polaroids-for-mom](https://github.com/D0NMEGA/polaroids-for-mom), a macOS screensaver of polaroids scattered on a wooden table. A Mother's Day gift, packaged so it never makes a network call.
+- [synq](https://github.com/D0NMEGA/synq), emotion-scored ad creative that re-optimises against viewer sentiment.
