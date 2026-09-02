@@ -1,6 +1,6 @@
-<img src="assets/tractography.png" width="100%" alt="Whole-brain tractography rendered from diffusion MRI" />
+<img src="assets/white-matter.gif" width="100%" alt="Sagittal, coronal and axial views of white-matter fibre pathways traced from diffusion MRI" />
 
-<sub>My own brain. 55 white-matter bundles from my 3T diffusion MRI, sitting inside my own cortical surface. GQI reconstruction, bundles labelled against the HCP842 atlas, rendered with a NumPy rasteriser I wrote.</sub>
+<sub>My own white matter. Fibre pathways traced from my 3T diffusion MRI, in the three canonical views, with a NumPy rasteriser I wrote.</sub>
 
 # Donovan Santine
 
@@ -32,17 +32,24 @@ across 4 degrees of freedom.
 
 ## Neuroimaging
 
-The image at the top is my own scan. The pipeline behind it takes preprocessed
-multi-shell diffusion data (b = 0 through 3000, 96 directions, 1.7 mm isotropic),
+The banner is my own diffusion scan. The pipeline behind it takes preprocessed
+multi-shell data (b = 0 through 3000, 96 directions, 1.7 mm isotropic),
 reconstructs it with GQI, tracks 600,000 streamlines, and recovers 55 named
-bundles by atlas recognition. The renderers are pure NumPy with no GPU and no 3D
-library: depth-slab compositing so near fibres occlude far ones, illuminated
-streamline shading so bundles read as tubes rather than ribbons, and a vectorised
-z-buffer that gets its depth test for free from sorting samples far to near.
+bundles by atlas recognition. Those are white-matter pathways, not the whole
+brain: diffusion MRI follows where water moves along axons, so what you see is
+the wiring, with the grey matter it connects left out.
 
-That imagery is the hero of [INIaustin.org](https://iniaustin.org), the site for
-the UT Austin chapter of the Institute of Neuro Innovation, which is the second
-chapter after UCLA.
+The renderers are pure NumPy, no GPU and no 3D library. The banner is drawn in
+the flattest of them, where every streamline is a hairline of one colour and the
+tone comes entirely from how much ink lands on each pixel, on a Beer-Lambert
+curve so crossings darken smoothly instead of clipping. The lit renderer that
+produced the imagery on INIaustin.org is the same rasteriser with depth-slab
+compositing, illuminated streamline shading, and a vectorised z-buffer that gets
+its depth test for free from sorting samples far to near.
+
+[INIaustin.org](https://iniaustin.org) is the site for the UT Austin chapter of
+the Institute of Neuro Innovation, the second chapter after UCLA. I built the
+site and the imagery on it.
 
 Alongside that I work on MRI preprocessing infrastructure (dcm2bids through
 MRIQC, fMRIPrep, QSIPrep, ASLPrep and QSMxT) and first-author exposome research
