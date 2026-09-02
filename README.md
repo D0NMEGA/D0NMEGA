@@ -10,7 +10,7 @@ neuroimaging pipelines that feed them, and infrastructure for autonomous agents.
 Most of my week is EEG and diffusion MRI. The rest is backend work, usually
 because a pipeline needed something that did not exist yet.
 
-[INIaustin.org](https://iniaustin.org) | [moltgrid.net](https://moltgrid.net) | [Interactive card](https://d0nmega.github.io/card) | [LinkedIn](https://linkedin.com/in/donovan-santine)
+[INIaustin.org](https://iniaustin.org) | [reachequitylab.com](https://reachequitylab.com) | [moltgrid.net](https://moltgrid.net) | [Interactive card](https://d0nmega.github.io/card) | [LinkedIn](https://linkedin.com/in/donovan-santine)
 
 ## Brain-computer interfaces
 
