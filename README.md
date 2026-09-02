@@ -1,6 +1,6 @@
-<img src="assets/white-matter.gif" width="100%" alt="Sagittal, coronal and axial views of white-matter fibre pathways traced from diffusion MRI" />
+<img src="assets/white-matter.gif" width="100%" alt="Sagittal, coronal and axial views of brain fibers traced from diffusion MRI" />
 
-<sub>My own white matter. Fibre pathways traced from my 3T diffusion MRI, in the three canonical views, with a NumPy rasteriser I wrote.</sub>
+<sub>My own brain fibers. Traced from my 3T diffusion MRI, in the three canonical views, with a NumPy rasteriser I wrote.</sub>
 
 # Donovan Santine
 
@@ -35,9 +35,9 @@ across 4 degrees of freedom.
 The banner is my own diffusion scan. The pipeline behind it takes preprocessed
 multi-shell data (b = 0 through 3000, 96 directions, 1.7 mm isotropic),
 reconstructs it with GQI, tracks 600,000 streamlines, and recovers 55 named
-bundles by atlas recognition. Those are white-matter pathways, not the whole
-brain: diffusion MRI follows where water moves along axons, so what you see is
-the wiring, with the grey matter it connects left out.
+bundles by atlas recognition. What you see is the fibers themselves, not a whole
+brain: diffusion MRI tracks water moving along axons, so the grey matter they
+connect is not in the picture.
 
 The renderers are pure NumPy, no GPU and no 3D library. The banner is drawn in
 the flattest of them, where every streamline is a hairline of one colour and the
