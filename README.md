@@ -30,6 +30,20 @@ top contributor, with 80 of its 121 commits.
 real-time SSVEP interface: 250 ms decision windows, above 90 percent accuracy
 across 4 degrees of freedom.
 
+[**Cortex**](https://github.com/D0NMEGA/Cortex) replays recorded primate M1
+spikes on Apple Silicon through a CoreML NDT1 decoder, a ReFIT-Kalman filter and
+a 120 Hz Metal cursor renderer, at 8.8 ms p99 software pipeline latency on an M5
+Pro. It reports its own negative results: a ridge decoder on raw spikes beats the
+1.3M-parameter transformer on held-out velocity R2 (0.4616 against 0.4238), so the
+demo runs the ridge decoder by default.
+
+[**neurorust**](https://github.com/D0NMEGA/neurorust) is a Rust runtime for
+intracortical data on PREEMPT_RT Linux, built for bounded worst-case latency at
+implant scale (1024 channels at 30 kHz) rather than good averages. It is early.
+What exists is the measurement harness every later latency claim rests on: it
+refuses a run unless fifteen preconditions hold on the live machine, and
+re-derives each published figure from the raw capture.
+
 ## Neuroimaging
 
 The banner is my own diffusion scan. The pipeline behind it takes preprocessed
@@ -56,7 +70,7 @@ MRIQC, fMRIPrep, QSIPrep, ASLPrep and QSMxT) and first-author exposome research
 at the REACH Equity Lab, with an abstract accepted to ISES 2026 in the machine
 learning session.
 
-## Infrastructure
+## AI agents
 
 [**MoltGrid**](https://github.com/D0NMEGA/MoltGrid) is a backend-as-a-service for
 autonomous agents: memory, task queues, inter-agent messaging, scheduling and
